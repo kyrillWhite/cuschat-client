@@ -1,0 +1,40 @@
+.button {
+  padding: 0;
+  color: var(--font-color);
+  font-size: var(--base-font-size);
+  border: 0;
+  border-radius: 10px;
+}
+
+.button__normal {
+  min-width: 135px;
+  min-height: 40px;
+  max-width: 135px;
+  max-height: 40px;
+}
+
+.button__small {
+  min-width: 95px;
+  min-height: 30px;
+  max-width: 95px;
+  max-height: 30px;
+}
+
+.button_enabled {
+  background-color: var(--primary-color);
+}
+
+.button_disabled {
+  background-color: var(--header-footer-color);
+}
+
+@media(hover:hover) {
+  .button_enabled:hover {
+    background-color: var(--title-color);
+    cursor: pointer;
+  }
+}
+
+.button_enabled:active {
+  background-color: var(--secondary-color);
+}

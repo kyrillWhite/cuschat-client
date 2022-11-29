@@ -1,0 +1,109 @@
+.service {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.service__form {
+    flex: 1 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--average-spacing) 0;
+}
+
+.service__name {
+    flex: 1 0 auto;
+    width: 174px;
+}
+
+.service__logo {
+    padding-right: var(--average-spacing);
+    object-fit: contain;
+    max-height: 40px;
+    min-height: 40px;
+    margin: auto 0 auto auto;
+}
+
+.service__title {
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.service__button {
+    margin: auto 0;
+}
+
+.service__part {
+    padding: 0 10px;
+    flex: 1 0 auto;
+    display: flex;
+}
+
+.service__input_wrapper {
+    flex: 10 1 auto;
+    display: flex;
+    max-width: 475px;
+    min-width: 200px;
+    padding: 0 10px;
+}
+
+.service__input {
+    flex: 10 1 auto;
+    display: flex;
+    min-width: 200px;
+    max-width: 330px;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.service__input_label {
+    font-size: var(--smallest-font-size);
+    padding-top: 0.25rem;
+}
+
+.service__input_label-text {
+    margin: auto 0;
+}
+
+.service__input-error {
+    color: var(--error-color);
+}
+
+.service__input-validating {
+    color: var(--waiting-color);
+    font-size: var(--small-font-size);
+}
+
+.service__input-connected {
+    color: var(--complete-color);
+    font-size: var(--small-font-size);
+}
+
+.service__input-text {
+    max-height: var(--large-spacing);
+    background-color: var(--font-color);
+    color: var(--bg-color);
+    border: 0;
+}
+
+@media (max-width:705px) {
+    .service__logo {
+        margin: auto 0;
+    }
+    .service__title {
+        margin: auto auto auto 0;
+    }
+    .service__button {
+        margin-top: var(--average-spacing);
+    }
+}
+
+@media (max-width:550px) {
+    .service__input {
+        margin: var(--average-spacing) auto var(--average-spacing) 0;
+    }
+    .service__button {
+        margin-top: auto;
+    }
+}

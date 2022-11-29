@@ -1,0 +1,81 @@
+.settings {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--average-spacing);
+}
+
+.settings__element {
+  flex: 1 0 auto;
+  background-color: var(--bg-color);
+  width: 100%;
+  margin-top: var(--average-spacing);
+  border-radius: 10px;
+}
+
+.settings__element>details[open]>summary {
+  border-radius: 10px 10px 0 0;
+}
+
+.settings__element>details[open]>summary>div.settings__element-arrow {
+  transform: rotate(90deg);
+  transform-origin: 25% 50%;
+}
+
+.settings__element-title {
+  font-size: var(--large-font-size);
+  color: var(--bg-color);
+  background-color: var(--title-color);
+  border-radius: 10px;
+  list-style-type: none;
+  padding-left: var(--average-spacing);
+  display: flex;
+  flex-direction: row;
+}
+
+.settings__element-title:hover {
+  cursor: pointer;
+}
+
+.settings__element-title-text {
+  margin: auto 0;
+  padding: var(--small-spacing) 0;
+}
+
+.settings__element-arrow {
+  width: 0;
+  height: 0;
+  border-top: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid transparent;
+  border-left: 0.5rem solid var(--bg-color);
+  margin: auto 0;
+  padding-right: var(--small-spacing);
+  transition: transform .2s ease;
+  transform-origin: 25% 50%;
+}
+
+.settings__element>details[open]>div.settings__element-body {
+  max-height: 5000px;
+  overflow: visible;
+  transition: max-height 1s ease;
+}
+
+.settings__element>details[open]>div.settings__element-body_column {
+  max-height: 500px;
+  overflow: visible;
+  transition: max-height .2s ease;
+}
+
+.settings__element-body {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 1s ease;
+}
+
+.settings__element-body_column {
+  max-height: 0px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: var(--average-spacing) 10px;
+  transition: max-height .2s ease;
+}

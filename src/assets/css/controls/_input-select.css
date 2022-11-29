@@ -1,0 +1,15 @@
+.input-select {
+  max-width: 165px;
+  height: 25px;
+  border: 0;
+  padding: 0 0 0 4px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+}
+
+@media (max-width:406px) {
+  .input-select {
+    max-width: 121px;
+  }
+}

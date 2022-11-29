@@ -1,0 +1,29 @@
+.page {
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-height: 100vh;
+}
+
+.page__content {
+  flex: 1 0 auto;
+  padding: calc(var(--average-spacing) + 4.75rem)
+    0 var(--average-spacing) 0;
+  margin: 0 var(--average-spacing);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width:768px) {
+  .page__content {
+    padding-top: calc(var(--average-spacing) + 3.75rem);
+  }
+}
+
+.page__main {
+  flex: 1 0 auto;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  width: 100%;
+}

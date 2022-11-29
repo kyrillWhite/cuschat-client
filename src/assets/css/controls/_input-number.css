@@ -1,0 +1,15 @@
+.input-number {
+  max-height: var(--large-spacing);
+  width: 90px;
+  background-color: var(--font-color);
+  color: var(--bg-color);
+  border: 0;
+  padding: 5px;
+  margin-right: 7px;
+}
+
+@media (max-width:406px) {
+  .input-number {
+    width: 71px;
+  }
+}

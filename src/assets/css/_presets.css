@@ -1,0 +1,81 @@
+.presets {
+  display: grid;
+  grid-template-columns: auto auto 50%;
+}
+
+.presets__preset {
+  margin: auto auto auto 0;
+  padding-right: var(--average-spacing);
+  font-weight: bold;
+}
+
+.presets__start-indent {
+  max-width: 192px;
+}
+
+.presets__preset_description {
+  margin: auto auto auto 0;
+  padding: var(--average-spacing) 0;
+  font-size: var(--small-font-size);
+}
+
+.presets__preset input[name="preset"] {
+  display: none;
+  margin-right: var(--average-spacing);
+}
+
+.presets__preset label {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.presets__preset label::before {
+  content: '';
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  background-size: 32px 32px;
+  left: 0;
+  bottom: 0;
+  margin-right: var(--average-spacing);
+  background: url(../images/radiobutton/not_checked/static.png) 0 0 round;
+}
+
+@media(hover:hover) {
+  .presets__preset label:hover::before {
+    background: url(../images/radiobutton/not_checked/hover.png) 0 0 round;
+  }
+
+  .presets__preset input[name="preset"]:checked + label:hover::before {
+    background: url(../images/radiobutton/checked/hover.png) 0 0 round;
+  }
+}
+
+.presets__preset label:active::before {
+  background: url(../images/radiobutton/not_checked/active.png) 0 0 round;
+}
+
+.presets__preset input[name="preset"]:checked + label::before {
+  background: url(../images/radiobutton/checked/static.png) 0 0 round;
+}
+
+.presets__preset input[name="preset"]:checked + label:active::before {
+  background: url(../images/radiobutton/checked/active.png) 0 0 round;
+}
+
+@media (max-width:406px) {
+  .presets {
+    display: grid;
+    grid-template-columns: auto;
+  }
+  
+  .presets__preset {
+    margin-top: var(--average-spacing);
+  }
+  
+  .presets__preset_description {
+    margin-bottom: 0;
+  }
+}
